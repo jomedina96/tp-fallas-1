@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href= "{{ url_for('static',filename='fallas.css') }}">>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+<nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">AJEDRECITO</a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon">
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav text-right text-white ml-auto">
+                <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Inicio</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Acerca</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contacto</a></li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" role="presentation"></li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="#"><img src="{{ url_for('static',filename='chess.png') }}"></a>
+                </li>
+                <li class="nav-item" role="presentation"></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="wrapper">
+    <div class="wrap" id="q0">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"><span id="number"> </span>Preparación </div>
+        </div>
+        <div class="h4 font-weight-bold"> Descubrí cuál es tu mejor movimiento</div>
+        <div class="pt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary" id="next0">Comenzar <span class="fas fa-arrow-right"></span> </button> </div>
+    </div>
+
+    <div class="wrap" id="q1">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"><span id="number"> </span>1 de 3 </div>
+        </div>
+        <div class="h4 font-weight-bold"> 1. Qué ficha querés mover primero?</div>
+        <div class="pt-4">
+            <form> 
+                <label class="options">Peón (1 movimiento) <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
+                <br>
+                <label class="options">Peón (2 movimientos) <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
+                <br>
+                <label class="options">Caballo <input type="radio" name="radio" id="rd" checked> <span class="checkmark"></span> </label> 
+                <br>
+                <label class="options">... <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
+            </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary" id="next1">Next <span class="fas fa-arrow-right"></span> </button> </div>
+    </div>
+    <div class="wrap" id="q2">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"> <span id="number"> </span>2 de 3 </div>
+        </div>
+        <div class="h4 font-weight-bold"> 2. Cuánta experiencia tenés en el juego?</div>
+        <div class="pt-4">
+            <form> 
+                <label class="options">Nada <input type="radio" name="radio"> <span class="checkmark"></span> </label><br>
+                <label class="options">Poca <input type="radio" name="radio" checked> <span class="checkmark"></span> </label><br> 
+                <label class="options">Regular <input type="radio" name="radio" id="rd"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Mucha <input type="radio" name="radio"> <span class="checkmark"></span> </label> <br>
+            </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back1"> <span class="fas fa-arrow-left pr-1"></span>Anterior </button> <button class="btn btn-primary" id="next2">Siguiente <span class="fas fa-arrow-right"></span> </button> </div>
+    </div>
+    <div class="wrap" id="q3">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"> <span id="number"> </span>3 de 3 </div>
+        </div>
+        <div class="h4 font-weight-bold"> 3. Pregunta?</div>
+        <div class="pt-4">
+            <form> 
+                <label class="options">A <input type="radio" name="radio"> <span class="checkmark"></span> </label>
+                <br> 
+                <label class="options">B <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
+                <br>
+                <label class="options">C <input type="radio" name="radio" id="rd" checked> <span class="checkmark"></span> </label> 
+                <br>
+                <label class="options">D <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
+            </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back2"> <span class="fas fa-arrow-left pr-2"></span>Anterior </button> <button class="btn btn-primary" id="next3">Enviar </button> </div>
+    </div>
+    <div class="wrap" id="result">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"> <span id="number"> </span>3 de 3 </div>
+        </div>
+        <div class="h4 font-weight-bold"> TENEMOS TU MOVIMIENTO</div>
+        <div class="pt-4">
+            La mejor apertura para vos es la siguiente!!
+            <span>
+                
+            </span>
+        </div>
+
+    </div>
+</div>
+<footer class="footer">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 footer-navigation">
+            <h3>
+                <a href="#">AAA<span>jedrecito</span></a></h3>
+        </div>
+        <div class="col-sm-6 col-md-4 footer-contacts">
+            <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                <p><span class="new-line-span">Paseo Colón 850</span>C.A.B.A., Argentina</p>
+            </div>
+            <div><i class="fa fa-phone footer-contacts-icon"></i>
+                <p class="footer-center-info email text-left"> +54 (11)4343-0968</p>
+            </div>
+            <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                <p> <a href="#" target="_blank">soporte@fi.uba.ar</a></p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-4 footer-about">
+            <h4>Acerca de nosotros</h4>
+            <p>Ajedrecito es una herramienta basada en un sistema experto con el fin de poder predecir la mejor jugada de apertura asociada a cada persona interesada en dar sus primeros pasos en el maravilloso mundo del Ajedrez.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var q0 = document.getElementById("q0");
+    var q1 = document.getElementById("q1");
+    var q2 = document.getElementById("q2");
+    var q3 = document.getElementById("q3");
+    var result = document.getElementById("result");
+
+    var next0 = document.getElementById('next0')
+    var back0 = document.getElementById('back0')
+    var next1 = document.getElementById('next1')
+    var back1 = document.getElementById('back1')
+    var next2 = document.getElementById('next2')
+    var back2 = document.getElementById('back2')
+
+    var next3 = document.getElementById('next3')
+    document.addEventListener('DOMContentLoaded', function() {
+        let query = window.matchMedia("(max-width: 767px)");
+        if (query.matches) {
+            
+            next0.onclick = function() {
+                q0.style.left = "-650px";
+                q1.style.left = "15px";
+            }
+            next1.onclick = function() {
+                q1.style.left = "-650px";
+                q2.style.left = "15px";
+            }
+            back1.onclick = function() {
+                q1.style.left = "15px";
+                q2.style.left = "650px";
+            }
+            back2.onclick = function() {
+                q2.style.left = "15px";
+                q3.style.left = "650px";
+            }
+            next2.onclick = function() {
+                q2.style.left = "-650px";
+                q3.style.left = "15px";
+            }
+
+            next3.onclick = function() {
+                q3.style.left = "-650px";
+                result.style.left = "15px";
+            }
+        } else {
+            
+            next0.onclick = function() {
+                q0.style.left = "-650px";
+                q1.style.left = "50px";
+            }
+            next1.onclick = function() {
+                q1.style.left = "-650px";
+                q2.style.left = "50px";
+            }
+            back1.onclick = function() {
+                q1.style.left = "50px";
+                q2.style.left = "650px";
+            }
+            back2.onclick = function() {
+                q2.style.left = "50px";
+                q3.style.left = "650px";
+            }
+            next2.onclick = function() {
+                q2.style.left = "-650px";
+                q3.style.left = "50px";
+            }
+            next3.onclick = function() {
+                q3.style.left = "-650px";
+                result.style.left = "50px";
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
