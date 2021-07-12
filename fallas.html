@@ -49,25 +49,23 @@
 
     <div class="wrap" id="q1">
         <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"><span id="number"> </span>1 de 3 </div>
+            <div class="h5 font-weight-bold"><span id="number"> </span>1 de 4</div>
         </div>
-        <div class="h4 font-weight-bold"> 1. Qué ficha querés mover primero?</div>
+        <div class="h4 font-weight-bold"> 1. ¿Qué ficha quiere mover primero?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Peón (1 movimiento) <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
-                <br>
-                <label class="options">Peón (2 movimientos) <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
-                <br>
-                <label class="options">Caballo <input type="radio" name="radio" id="rd" checked> <span class="checkmark"></span> </label> 
-                <br>
-                <label class="options">... <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
+                <label class="options">Peón (1 movimiento) <input type="radio" name="first_piece" value="0"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Peón (2 movimientos) <input type="radio" name="first_piece" value="1"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Caballo <input type="radio" name="first_piece" id="rd" value="2" checked> <span class="checkmark"></span> </label> <br>
+                <label class="options">... <input type="radio" name="first_piece" value="3"> <span class="checkmark"></span> </label> 
             </form>
         </div>
         <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary" id="next1">Next <span class="fas fa-arrow-right"></span> </button> </div>
     </div>
+
     <div class="wrap" id="q2">
         <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"> <span id="number"> </span>2 de 3 </div>
+            <div class="h5 font-weight-bold"> <span id="number"> </span>2 de 4</div>
         </div>
         <div class="h4 font-weight-bold"> 2. Cuánta experiencia tenés en el juego?</div>
         <div class="pt-4">
@@ -80,24 +78,37 @@
         </div>
         <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back1"> <span class="fas fa-arrow-left pr-1"></span>Anterior </button> <button class="btn btn-primary" id="next2">Siguiente <span class="fas fa-arrow-right"></span> </button> </div>
     </div>
+
     <div class="wrap" id="q3">
         <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"> <span id="number"> </span>3 de 3 </div>
+            <div class="h5 font-weight-bold"> <span id="number"> </span>3 de 4</div>
         </div>
-        <div class="h4 font-weight-bold"> 3. Pregunta?</div>
+        <div class="h4 font-weight-bold"> 3. ¿Con que color va a utilizar?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">A <input type="radio" name="radio"> <span class="checkmark"></span> </label>
-                <br> 
-                <label class="options">B <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
-                <br>
-                <label class="options">C <input type="radio" name="radio" id="rd" checked> <span class="checkmark"></span> </label> 
-                <br>
+                <label class="options">Blancas<input type="radio" name="color" value="white" checked> <span class="checkmark"></span> </label><br> 
+                <label class="options">Negras<input type="radio" name="color" value="black"> <span class="checkmark"></span> </label>
+            </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back2"> <span class="fas fa-arrow-left pr-2"></span>Anterior </button> <button class="btn btn-primary" id="next3">Siguiente <span class="fas fa-arrow-right"></span></button> </div>
+    </div>
+    
+    <div class="wrap" id="q4">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"> <span id="number"> </span>4 de 4</div>
+        </div>
+        <div class="h4 font-weight-bold"> 4. Pregunta?</div>
+        <div class="pt-4">
+            <form> 
+                <label class="options">A <input type="radio" name="radio"> <span class="checkmark"></span> </label><br> 
+                <label class="options">B <input type="radio" name="radio"> <span class="checkmark"></span> </label> <br>
+                <label class="options">C <input type="radio" name="radio" id="rd" checked> <span class="checkmark"></span> </label> <br>
                 <label class="options">D <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
             </form>
         </div>
-        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back2"> <span class="fas fa-arrow-left pr-2"></span>Anterior </button> <button class="btn btn-primary" id="next3">Enviar </button> </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back3"> <span class="fas fa-arrow-left pr-2"></span>Anterior </button> <button class="btn btn-primary" id="next4">Enviar </button> </div>
     </div>
+    
     <div class="wrap" id="result">
         <div class="text-center pb-4">
             <div class="h5 font-weight-bold"> <span id="number"> </span>3 de 3 </div>
@@ -105,10 +116,8 @@
         <div class="h4 font-weight-bold"> TENEMOS TU MOVIMIENTO</div>
         <div class="pt-4">
             La mejor apertura para vos es la siguiente!!
-            <span>
-                
-            </span>
         </div>
+        <div class="h5 font-weight-bold" id="best-opening">Loading...</div>
 
     </div>
 </div>
@@ -137,79 +146,6 @@
     </div>
 </footer>
 
-<script>
-    var q0 = document.getElementById("q0");
-    var q1 = document.getElementById("q1");
-    var q2 = document.getElementById("q2");
-    var q3 = document.getElementById("q3");
-    var result = document.getElementById("result");
-
-    var next0 = document.getElementById('next0')
-    var back0 = document.getElementById('back0')
-    var next1 = document.getElementById('next1')
-    var back1 = document.getElementById('back1')
-    var next2 = document.getElementById('next2')
-    var back2 = document.getElementById('back2')
-
-    var next3 = document.getElementById('next3')
-    document.addEventListener('DOMContentLoaded', function() {
-        let query = window.matchMedia("(max-width: 767px)");
-        if (query.matches) {
-            
-            next0.onclick = function() {
-                q0.style.left = "-650px";
-                q1.style.left = "15px";
-            }
-            next1.onclick = function() {
-                q1.style.left = "-650px";
-                q2.style.left = "15px";
-            }
-            back1.onclick = function() {
-                q1.style.left = "15px";
-                q2.style.left = "650px";
-            }
-            back2.onclick = function() {
-                q2.style.left = "15px";
-                q3.style.left = "650px";
-            }
-            next2.onclick = function() {
-                q2.style.left = "-650px";
-                q3.style.left = "15px";
-            }
-
-            next3.onclick = function() {
-                q3.style.left = "-650px";
-                result.style.left = "15px";
-            }
-        } else {
-            
-            next0.onclick = function() {
-                q0.style.left = "-650px";
-                q1.style.left = "50px";
-            }
-            next1.onclick = function() {
-                q1.style.left = "-650px";
-                q2.style.left = "50px";
-            }
-            back1.onclick = function() {
-                q1.style.left = "50px";
-                q2.style.left = "650px";
-            }
-            back2.onclick = function() {
-                q2.style.left = "50px";
-                q3.style.left = "650px";
-            }
-            next2.onclick = function() {
-                q2.style.left = "-650px";
-                q3.style.left = "50px";
-            }
-            next3.onclick = function() {
-                q3.style.left = "-650px";
-                result.style.left = "50px";
-            }
-        }
-    });
-
-</script>
+<script src="static/script.js"></script>
 </body>
 </html>

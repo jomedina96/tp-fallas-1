@@ -1,0 +1,28 @@
+from openings import Opening, ItalianOpening, KingsIndianOpening, CaroKannOpening, UserOpening
+import logging
+
+user_opening = None
+
+rule "Comienzo":
+    then:
+        attribute user_opening = get_user_opening()
+        print(user_opening.color)
+
+rule "Is there an opening?":
+	when:
+		exists UserOpening()
+	then:
+		print( "There is an user opening!" )
+
+rule "Select color":
+    when:
+        $opening := Opening(color != user_opening.color)
+    then:
+        forget $opening
+
+rule "Get opening":
+    when:
+        $opening := Opening()
+    then:
+        set_recomended_opening($opening.name)
+        halt
