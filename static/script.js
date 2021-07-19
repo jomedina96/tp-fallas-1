@@ -1,9 +1,11 @@
 async function getResult() {
-    first_piece_value = document.querySelector('input[name="first_piece"]:checked').value;
+    position_value = document.querySelector('input[name="position"]:checked').value;
     color_value = document.querySelector('input[name="color"]:checked').value;
+    difficulty_value = document.querySelector('input[name="difficulty"]:checked').value;
     body_obj = {
         color: color_value,
-        first_piece: first_piece_value
+        position: position_value,
+        difficulty: difficulty_value
     };
     
     var request = new Request('/result', {

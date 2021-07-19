@@ -7,4 +7,3 @@ RUN pip install --no-cache-dir -r requirements.txt
 ADD . /api
 EXPOSE 5000
 CMD export FLASK_APP=wsgi.py && flask run --host=0.0.0.0 -p $PORT
-#CMD python ./Example.py

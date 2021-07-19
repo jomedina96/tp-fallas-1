@@ -1,4 +1,4 @@
-from openings import Opening, ItalianOpening, KingsIndianOpening, CaroKannOpening, UserOpening
+from openings import Opening, UserOpening
 import logging
 
 user_opening = None
@@ -17,6 +17,18 @@ rule "Is there an opening?":
 rule "Select color":
     when:
         $opening := Opening(color != user_opening.color)
+    then:
+        forget $opening
+
+rule "Select position":
+    when:
+        $opening := Opening(position != user_opening.position)
+    then:
+        forget $opening
+
+rule "Select difficulty":
+    when:
+        $opening := Opening(difficulty < user_opening.difficulty - 1 or difficulty > user_opening.difficulty + 1)
     then:
         forget $opening
 

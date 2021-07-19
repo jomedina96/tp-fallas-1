@@ -49,39 +49,7 @@
 
     <div class="wrap" id="q1">
         <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"><span id="number"> </span>1 de 4</div>
-        </div>
-        <div class="h4 font-weight-bold"> 1. ¿Qué ficha quiere mover primero?</div>
-        <div class="pt-4">
-            <form> 
-                <label class="options">Peón (1 movimiento) <input type="radio" name="first_piece" value="0"> <span class="checkmark"></span> </label> <br>
-                <label class="options">Peón (2 movimientos) <input type="radio" name="first_piece" value="1"> <span class="checkmark"></span> </label> <br>
-                <label class="options">Caballo <input type="radio" name="first_piece" id="rd" value="2" checked> <span class="checkmark"></span> </label> <br>
-                <label class="options">... <input type="radio" name="first_piece" value="3"> <span class="checkmark"></span> </label> 
-            </form>
-        </div>
-        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary" id="next1">Next <span class="fas fa-arrow-right"></span> </button> </div>
-    </div>
-
-    <div class="wrap" id="q2">
-        <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"> <span id="number"> </span>2 de 4</div>
-        </div>
-        <div class="h4 font-weight-bold"> 2. Cuánta experiencia tenés en el juego?</div>
-        <div class="pt-4">
-            <form> 
-                <label class="options">Nada <input type="radio" name="radio"> <span class="checkmark"></span> </label><br>
-                <label class="options">Poca <input type="radio" name="radio" checked> <span class="checkmark"></span> </label><br> 
-                <label class="options">Regular <input type="radio" name="radio" id="rd"> <span class="checkmark"></span> </label> <br>
-                <label class="options">Mucha <input type="radio" name="radio"> <span class="checkmark"></span> </label> <br>
-            </form>
-        </div>
-        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back1"> <span class="fas fa-arrow-left pr-1"></span>Anterior </button> <button class="btn btn-primary" id="next2">Siguiente <span class="fas fa-arrow-right"></span> </button> </div>
-    </div>
-
-    <div class="wrap" id="q3">
-        <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"> <span id="number"> </span>3 de 4</div>
+            <div class="h5 font-weight-bold"> <span id="number"> </span>1 de 3</div>
         </div>
         <div class="h4 font-weight-bold"> 3. ¿Con que color va a utilizar?</div>
         <div class="pt-4">
@@ -90,9 +58,40 @@
                 <label class="options">Negras<input type="radio" name="color" value="black"> <span class="checkmark"></span> </label>
             </form>
         </div>
-        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back2"> <span class="fas fa-arrow-left pr-2"></span>Anterior </button> <button class="btn btn-primary" id="next3">Siguiente <span class="fas fa-arrow-right"></span></button> </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back0"> <span class="fas fa-arrow-left pr-2"></span>Anterior </button> <button class="btn btn-primary" id="next1">Siguiente <span class="fas fa-arrow-right"></span></button> </div>
     </div>
-    
+
+    <div class="wrap" id="q2">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"> <span id="number"> </span>2 de 3</div>
+        </div>
+        <div class="h4 font-weight-bold"> 2. ¿Cuánta experiencia tiene en el juego?</div>
+        <div class="pt-4">
+            <form> 
+                <label class="options">Principiante<input type="radio" name="difficulty" value="1"> <span class="checkmark"></span> </label><br>
+                <label class="options">Avanzado <input type="radio" name="difficulty" value="3" checked> <span class="checkmark"></span> </label><br> 
+                <label class="options">Experto <input type="radio" name="difficulty" value="5" id="rd"> <span class="checkmark"></span> </label> <br>
+            </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back1"> <span class="fas fa-arrow-left pr-1"></span>Anterior </button> <button class="btn btn-primary" id="next2">Siguiente <span class="fas fa-arrow-right"></span> </button> </div>
+    </div>
+
+    <div class="wrap" id="q3">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"><span id="number"> </span>3 de 3</div>
+        </div>
+        <div class="h4 font-weight-bold"> 3. ¿Qué tipo de posición desea?</div>
+        <div class="pt-4">
+            <form> 
+                <label class="options">Abierta<input type="radio" name="position" value="open"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Semi-abierta<input type="radio" name="position" value="semi-open"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Cerrada<input type="radio" name="position" id="rd" value="closed" checked> <span class="checkmark"></span> </label> <br>
+            </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back2"> <span class="fas fa-arrow-left pr-1"></span>Anterior </button> <button class="btn btn-primary" id="next3">Siguiente <span class="fas fa-arrow-right"></span> </button> </div>
+    </div>
+
+
     <div class="wrap" id="q4">
         <div class="text-center pb-4">
             <div class="h5 font-weight-bold"> <span id="number"> </span>4 de 4</div>

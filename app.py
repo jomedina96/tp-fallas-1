@@ -35,9 +35,9 @@ def home():
 @app.route("/result", methods=['POST'])
 def result():
     body = request.get_json()
-    print(body["color"])
-    print(body["first_piece"])
-    user_opening = UserOpening(body["color"])
+    user_opening = UserOpening(color=body["color"],
+                        position=body["position"],
+                        difficulty=int(body["difficulty"]))
     
     myIntellect = MyIntellect()
     myIntellect.set_user_opening(user_opening)
