@@ -9,6 +9,8 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
+<title>Ajedrecito</title>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
 <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
@@ -27,7 +29,7 @@
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item" role="presentation"></li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="#"><img src="{{ url_for('static',filename='chess.png') }}"></a>
+                   <img style="max-width: 48px;" src="{{ url_for('static',filename='chess.png') }}">
                 </li>
                 <li class="nav-item" role="presentation"></li>
             </ul>
@@ -140,7 +142,7 @@
         <div class="text-center pb-4">
             <div class="h5 font-weight-bold"> <span id="number"> </span>Resultado</div>
         </div>
-        <a href="#" id="opening-link"><div class="h5 font-weight-bold" id="opening-name" style="text-align: center;">Loading...</div></a><br>
+        <a id="opening-link"><div class="h5 font-weight-bold" id="opening-name" style="text-align: center;">Loading...</div></a><br>
         <div class="container"><img id="opening-image"></img></div>
 
     </div>

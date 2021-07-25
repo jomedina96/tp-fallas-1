@@ -6,72 +6,72 @@
     },
     "Ruy Lopez": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://es.wikipedia.org/wiki/Apertura_espa%C3%B1ola",
+        "img": "ruy_lopez.png"
     },
     "Defensa Francesa: variacion Chingorin": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://www.chess.com/openings/French-Defense-Chigorin-Variation",
+        "img": "french_chingorin.png"
     },
     "Sistema London": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://es.wikipedia.org/wiki/Apertura_de_alfil_de_dama",
+        "img": "london.png"
     },
     "Ataque Kings Indian": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://es.wikipedia.org/wiki/Ataque_indio_de_rey",
+        "img": "kings_indian_attack.png"
     },
     "Defensa Kings Indian": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://es.wikipedia.org/wiki/Defensa_india_de_rey",
+        "img": "kings_indian_defense.png"
     },
     "Caro Kann": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://es.wikipedia.org/wiki/Defensa_Caro-Kann",
+        "img": "caro_kann.png"
     },
     "Defensa Hungara": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://es.wikipedia.org/wiki/Defensa_h%C3%BAngara",
+        "img": "hungarian.png"
     },
     "Defensa Greco": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://en.wikipedia.org/wiki/Greco_Defence",
+        "img": "greco.png"
     },
     "Defensa Escandinava": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://es.wikipedia.org/wiki/Defensa_escandinava",
+        "img": "scandinavian.png"
     },
     "Ataque Stonewall ": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://en.wikipedia.org/wiki/Stonewall_Attack",
+        "img": "stonewall.png"
     },
     "Defensa Grunfeld": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://es.wikipedia.org/wiki/Defensa_Gr%C3%BCnfeld",
+        "img": "grunfeld.png"
     },
     "Defensa Alekhine": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://es.wikipedia.org/wiki/Defensa_Alekhine",
+        "img": "alekhine.png"
     },
     "Apertura Reti": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://en.wikipedia.org/wiki/R%C3%A9ti_Opening",
+        "img": "reti.png"
     },
     "Ataque Torre": {
         "description": "",
-        "link": "",
-        "img": ""
+        "link": "https://es.wikipedia.org/wiki/Ataque_Torre",
+        "img": "torre.png"
     }
 }

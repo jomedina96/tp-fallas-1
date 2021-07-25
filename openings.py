@@ -82,7 +82,7 @@ class ItalianOpening(Opening):
 
 class RuyLopezOpening(Opening):
     def __init__(self):
-        super(RuyLopezOpening, self).__init__(name="Ruy Lopez", color="white", position="open", difficulty=3, style="dinamic", minimum_time=2, objective="win")
+        super(RuyLopezOpening, self).__init__(name="Ruy Lopez", color="white", position="open", difficulty=3, style="dinamic", minimum_time=3, objective="win")
 
 class ChigorinOpening(Opening):
     def __init__(self):

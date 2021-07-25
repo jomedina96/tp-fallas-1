@@ -2,25 +2,33 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import jsonify
+from flask import send_from_directory
 from intellect.Intellect import Intellect
 from intellect.Intellect import Callable
 from openings import Opening, UserOpening
+import os
 import json
+import random
 
 app = Flask(__name__, template_folder='')
 openings = {}
 with open('static/aperturas.json') as json_data:
     openings = json.load(json_data)
 
+
+@app.route('/favicon.ico') 
+def favicon(): 
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 class MyIntellect(Intellect):
     def __init__(self):
         super(MyIntellect, self).__init__()
-        self._recomended_opening = ""
+        self._recomended_openings = []
         self._user_opening = None
 
     @Callable
     def set_recomended_opening(self, recomended_opening):
-        self._recomended_opening = recomended_opening
+        self._recomended_openings.append(recomended_opening)
 
     @Callable
     def get_user_opening(self):
@@ -30,7 +38,9 @@ class MyIntellect(Intellect):
         self._user_opening = opening
 
     def get_recomended_opening(self):
-        return self._recomended_opening
+        if len(self._recomended_openings) == 0:
+            return ""
+        return random.choice(self._recomended_openings)
 
 @app.route("/")
 def home():

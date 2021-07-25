@@ -35,6 +35,7 @@ async function getResult() {
         document.getElementById('opening-name').innerHTML = data["name"]
         document.getElementById('opening-image').src = "static/imgs/" + data["img"]
         document.getElementById('opening-link').href = data["link"]
+        document.getElementById('opening-link').target = "_blank"
     }
 }
 
