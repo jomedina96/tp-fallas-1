@@ -40,18 +40,18 @@
         <div class="text-center pb-4">
             <div class="h5 font-weight-bold"><span id="number"> </span>Preparación </div>
         </div>
-        <div class="h4 font-weight-bold"> Descubrí cuál es tu mejor movimiento</div>
+        <div class="h4 font-weight-bold"> Descubra cuál es su mejor apertura</div>
         <div class="pt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            A continuación, le realizaremos unas preguntas para recomendarle una apertura acorde para el juego de ajedrez.
         </div>
         <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary" id="next0">Comenzar <span class="fas fa-arrow-right"></span> </button> </div>
     </div>
 
     <div class="wrap" id="q1">
         <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"> <span id="number"> </span>1 de 3</div>
+            <div class="h5 font-weight-bold"> <span id="number"> </span>1 de 6</div>
         </div>
-        <div class="h4 font-weight-bold"> 3. ¿Con que color va a utilizar?</div>
+        <div class="h4 font-weight-bold">1. ¿Qué color va a utilizar?</div>
         <div class="pt-4">
             <form> 
                 <label class="options">Blancas<input type="radio" name="color" value="white" checked> <span class="checkmark"></span> </label><br> 
@@ -63,14 +63,14 @@
 
     <div class="wrap" id="q2">
         <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"> <span id="number"> </span>2 de 3</div>
+            <div class="h5 font-weight-bold"> <span id="number"> </span>2 de 6</div>
         </div>
-        <div class="h4 font-weight-bold"> 2. ¿Cuánta experiencia tiene en el juego?</div>
+        <div class="h4 font-weight-bold">2. ¿Cuánta experiencia tiene en el juego?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Principiante<input type="radio" name="difficulty" value="1"> <span class="checkmark"></span> </label><br>
-                <label class="options">Avanzado <input type="radio" name="difficulty" value="3" checked> <span class="checkmark"></span> </label><br> 
-                <label class="options">Experto <input type="radio" name="difficulty" value="5" id="rd"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Principiante<input type="radio" name="difficulty" value="1" checked> <span class="checkmark"></span> </label><br>
+                <label class="options">Avanzado <input type="radio" name="difficulty" value="3" > <span class="checkmark"></span> </label><br> 
+                <label class="options">Experto <input type="radio" name="difficulty" value="5""> <span class="checkmark"></span> </label> <br>
             </form>
         </div>
         <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back1"> <span class="fas fa-arrow-left pr-1"></span>Anterior </button> <button class="btn btn-primary" id="next2">Siguiente <span class="fas fa-arrow-right"></span> </button> </div>
@@ -78,14 +78,14 @@
 
     <div class="wrap" id="q3">
         <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"><span id="number"> </span>3 de 3</div>
+            <div class="h5 font-weight-bold"><span id="number"> </span>3 de 6</div>
         </div>
-        <div class="h4 font-weight-bold"> 3. ¿Qué tipo de posición desea?</div>
+        <div class="h4 font-weight-bold">3. ¿Qué tipo de posición desea?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Abierta<input type="radio" name="position" value="open"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Abierta<input type="radio" name="position" value="open" checked> <span class="checkmark"></span> </label> <br>
                 <label class="options">Semi-abierta<input type="radio" name="position" value="semi-open"> <span class="checkmark"></span> </label> <br>
-                <label class="options">Cerrada<input type="radio" name="position" id="rd" value="closed" checked> <span class="checkmark"></span> </label> <br>
+                <label class="options">Cerrada<input type="radio" name="position" id="rd" value="closed"> <span class="checkmark"></span> </label> <br>
             </form>
         </div>
         <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back2"> <span class="fas fa-arrow-left pr-1"></span>Anterior </button> <button class="btn btn-primary" id="next3">Siguiente <span class="fas fa-arrow-right"></span> </button> </div>
@@ -94,29 +94,54 @@
 
     <div class="wrap" id="q4">
         <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"> <span id="number"> </span>4 de 4</div>
+            <div class="h5 font-weight-bold"><span id="number"> </span>4 de 6</div>
         </div>
-        <div class="h4 font-weight-bold"> 4. Pregunta?</div>
+        <div class="h4 font-weight-bold"> 3. ¿Qué estilo de partida prefiere?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">A <input type="radio" name="radio"> <span class="checkmark"></span> </label><br> 
-                <label class="options">B <input type="radio" name="radio"> <span class="checkmark"></span> </label> <br>
-                <label class="options">C <input type="radio" name="radio" id="rd" checked> <span class="checkmark"></span> </label> <br>
-                <label class="options">D <input type="radio" name="radio"> <span class="checkmark"></span> </label> 
+                <label class="options">Dinámica<input type="radio" name="style" value="dinamic" checked> <span class="checkmark"></span> </label> <br>
+                <label class="options">Posicional<input type="radio" name="style" value="positional"> <span class="checkmark"></span> </label> <br>
             </form>
         </div>
-        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back3"> <span class="fas fa-arrow-left pr-2"></span>Anterior </button> <button class="btn btn-primary" id="next4">Enviar </button> </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back3"> <span class="fas fa-arrow-left pr-1"></span>Anterior </button> <button class="btn btn-primary" id="next4">Siguiente <span class="fas fa-arrow-right"></span> </button> </div>
+    </div>
+
+    <div class="wrap" id="q5">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"><span id="number"> </span>5 de 6</div>
+        </div>
+        <div class="h4 font-weight-bold">5. ¿Cuál es la modalidad de juego?</div>
+        <div class="pt-4">
+            <form> 
+                <label class="options">Bala<input type="radio" name="minimum_time" value="1" checked> <span class="checkmark"></span> </label> <br>
+                <label class="options">Blitz<input type="radio" name="minimum_time" value="2"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Rápido<input type="radio" name="minimum_time" value="3"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Clásico<input type="radio" name="minimum_time" value="4"> <span class="checkmark"></span> </label> <br>
+            </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back4"> <span class="fas fa-arrow-left pr-1"></span>Anterior </button> <button class="btn btn-primary" id="next5">Siguiente <span class="fas fa-arrow-right"></span> </button> </div>
+    </div>
+
+    <div class="wrap" id="q6">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"> <span id="number"> </span>6 de 6</div>
+        </div>
+        <div class="h4 font-weight-bold">6. ¿Cuál es su objetivo en la partida?</div>
+        <div class="pt-4">
+            <form> 
+                <label class="options">Ganar<input type="radio" name="objective" value="win" checked> <span class="checkmark"></span> </label><br> 
+                <label class="options">Tratar de empatar<input type="radio" name="objective" value="stalemate"> <span class="checkmark"></span> </label> <br>
+            </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back5"> <span class="fas fa-arrow-left pr-2"></span>Anterior </button> <button class="btn btn-primary" id="next6">Enviar </button> </div>
     </div>
     
     <div class="wrap" id="result">
         <div class="text-center pb-4">
-            <div class="h5 font-weight-bold"> <span id="number"> </span>3 de 3 </div>
+            <div class="h5 font-weight-bold"> <span id="number"> </span>Resultado</div>
         </div>
-        <div class="h4 font-weight-bold"> TENEMOS TU MOVIMIENTO</div>
-        <div class="pt-4">
-            La mejor apertura para vos es la siguiente!!
-        </div>
-        <div class="h5 font-weight-bold" id="best-opening">Loading...</div>
+        <div class="h5 font-weight-bold" id="opening-name" style="text-align: center;">Loading...</div><br>
+        <div class="container"><img id="opening-image"></img></div>
 
     </div>
 </div>

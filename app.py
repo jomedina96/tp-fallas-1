@@ -5,8 +5,12 @@ from flask import jsonify
 from intellect.Intellect import Intellect
 from intellect.Intellect import Callable
 from openings import Opening, UserOpening
+import json
 
 app = Flask(__name__, template_folder='')
+openings = {}
+with open('static/aperturas.json') as json_data:
+    openings = json.load(json_data)
 
 class MyIntellect(Intellect):
     def __init__(self):
@@ -37,7 +41,10 @@ def result():
     body = request.get_json()
     user_opening = UserOpening(color=body["color"],
                         position=body["position"],
-                        difficulty=int(body["difficulty"]))
+                        difficulty=int(body["difficulty"]),
+                        style=body["style"],
+                        minimum_time=int(body["minimum_time"]),
+                        objective=body["objective"])
     
     myIntellect = MyIntellect()
     myIntellect.set_user_opening(user_opening)
@@ -45,7 +52,14 @@ def result():
     Opening.learn_openings(myIntellect)
 
     myIntellect.reason()
-    return jsonify({"opening": myIntellect.get_recomended_opening()}), 200
+    opening_data = {"name": ""}
+    opening_name = myIntellect.get_recomended_opening()
+
+    if opening_name != "":
+        opening_data["name"] = opening_name
+        opening_data.update(openings.get(opening_name))
+
+    return jsonify(opening_data), 200
 
 @app.route("/result2", methods=['POST'])
 def result2():
