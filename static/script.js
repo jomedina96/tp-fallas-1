@@ -27,9 +27,15 @@ async function getResult() {
     
     var data = await response.json();
     console.log(data);
-
-    document.getElementById('opening-name').innerHTML = data["name"]
-    document.getElementById('opening-image').src = "static/imgs/" + data["img"]
+    
+    if (data["name"] == ""){
+        document.getElementById('opening-name').innerHTML = "No pudimos encontrar una apertura en base a los criterios que eligió"
+    }
+    else{
+        document.getElementById('opening-name').innerHTML = data["name"]
+        document.getElementById('opening-image').src = "static/imgs/" + data["img"]
+        document.getElementById('opening-link').href = data["link"]
+    }
 }
 
 var q0 = document.getElementById("q0");

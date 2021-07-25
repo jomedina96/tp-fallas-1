@@ -1,7 +1,7 @@
 {
-    "Italian Opening": {
+    "Apertura Italiana": {
         "description": "",
-        "link": "",
+        "link": "https://es.wikipedia.org/wiki/Apertura_italiana",
         "img": "italian.png"
     },
     "Ruy Lopez": {
@@ -9,17 +9,22 @@
         "link": "",
         "img": ""
     },
-    "French Defense: Chingorin variation": {
+    "Defensa Francesa: variacion Chingorin": {
         "description": "",
         "link": "",
         "img": ""
     },
-    "London System": {
+    "Sistema London": {
         "description": "",
         "link": "",
         "img": ""
     },
-    "Kings Indian Attack": {
+    "Ataque Kings Indian": {
+        "description": "",
+        "link": "",
+        "img": ""
+    },
+    "Defensa Kings Indian": {
         "description": "",
         "link": "",
         "img": ""
@@ -29,42 +34,42 @@
         "link": "",
         "img": ""
     },
-    "Hungarian Defense": {
+    "Defensa Hungara": {
         "description": "",
         "link": "",
         "img": ""
     },
-    "Greco Defense": {
+    "Defensa Greco": {
         "description": "",
         "link": "",
         "img": ""
     },
-    "Scandinavian Defense": {
+    "Defensa Escandinava": {
         "description": "",
         "link": "",
         "img": ""
     },
-    "Stonewall Attack": {
+    "Ataque Stonewall ": {
         "description": "",
         "link": "",
         "img": ""
     },
-    "Grunfeld Defense": {
+    "Defensa Grunfeld": {
         "description": "",
         "link": "",
         "img": ""
     },
-    "Alekhine's Defense": {
+    "Defensa Alekhine": {
         "description": "",
         "link": "",
         "img": ""
     },
-    "Reti Opening": {
+    "Apertura Reti": {
         "description": "",
         "link": "",
         "img": ""
     },
-    "Torre Attack": {
+    "Ataque Torre": {
         "description": "",
         "link": "",
         "img": ""
