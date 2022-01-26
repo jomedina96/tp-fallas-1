@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-<title>Ajedrecito</title>
+<title>Ajedrecito - Fallas II</title>
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
@@ -51,7 +51,7 @@
         <div class="h4 font-weight-bold">1. ¿Qué color va a utilizar?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Blancas<input type="radio" name="color" value="white" checked> <span class="checkmark"></span> </label><br> 
+                <label class="options">Blancas<input type="radio" name="color" value="white"> <span class="checkmark"></span> </label><br> 
                 <label class="options">Negras<input type="radio" name="color" value="black"> <span class="checkmark"></span> </label>
             </form>
         </div>
@@ -65,7 +65,7 @@
         <div class="h4 font-weight-bold">2. ¿Cuánta experiencia tiene en el juego?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Principiante<input type="radio" name="difficulty" value="1" checked> <span class="checkmark"></span> </label><br>
+                <label class="options">Principiante<input type="radio" name="difficulty" value="1"> <span class="checkmark"></span> </label><br>
                 <label class="options">Avanzado <input type="radio" name="difficulty" value="3" > <span class="checkmark"></span> </label><br> 
                 <label class="options">Experto <input type="radio" name="difficulty" value="5""> <span class="checkmark"></span> </label> <br>
             </form>
@@ -80,7 +80,7 @@
         <div class="h4 font-weight-bold">3. ¿Qué tipo de posición desea?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Abierta<input type="radio" name="position" value="open" checked> <span class="checkmark"></span> </label> <br>
+                <label class="options">Abierta<input type="radio" name="position" value="open"> <span class="checkmark"></span> </label> <br>
                 <label class="options">Semi-abierta<input type="radio" name="position" value="semi-open"> <span class="checkmark"></span> </label> <br>
                 <label class="options">Cerrada<input type="radio" name="position" id="rd" value="closed"> <span class="checkmark"></span> </label> <br>
             </form>
@@ -96,7 +96,7 @@
         <div class="h4 font-weight-bold"> 3. ¿Qué estilo de partida prefiere?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Dinámica<input type="radio" name="style" value="dinamic" checked> <span class="checkmark"></span> </label> <br>
+                <label class="options">Dinámica<input type="radio" name="style" value="dinamic"> <span class="checkmark"></span> </label> <br>
                 <label class="options">Posicional<input type="radio" name="style" value="positional"> <span class="checkmark"></span> </label> <br>
             </form>
         </div>
@@ -110,7 +110,7 @@
         <div class="h4 font-weight-bold">5. ¿Cuál es la modalidad de juego?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Bala<input type="radio" name="minimum_time" value="1" checked> <span class="checkmark"></span> </label> <br>
+                <label class="options">Bala<input type="radio" name="minimum_time" value="1"> <span class="checkmark"></span> </label> <br>
                 <label class="options">Blitz<input type="radio" name="minimum_time" value="2"> <span class="checkmark"></span> </label> <br>
                 <label class="options">Rápido<input type="radio" name="minimum_time" value="3"> <span class="checkmark"></span> </label> <br>
                 <label class="options">Clásico<input type="radio" name="minimum_time" value="4"> <span class="checkmark"></span> </label> <br>
@@ -126,7 +126,7 @@
         <div class="h4 font-weight-bold">6. ¿Cuál es su objetivo en la partida?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Ganar<input type="radio" name="objective" value="win" checked> <span class="checkmark"></span> </label><br> 
+                <label class="options">Ganar<input type="radio" name="objective" value="win"> <span class="checkmark"></span> </label><br> 
                 <label class="options">Tratar de empatar<input type="radio" name="objective" value="stalemate"> <span class="checkmark"></span> </label> <br>
             </form>
         </div>

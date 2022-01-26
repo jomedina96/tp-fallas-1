@@ -1,10 +1,11 @@
 async function getResult() {
-    position_value = document.querySelector('input[name="position"]:checked').value;
+    console.log('get result')
     color_value = document.querySelector('input[name="color"]:checked').value;
-    difficulty_value = document.querySelector('input[name="difficulty"]:checked').value;
-    style = document.querySelector('input[name="style"]:checked').value;
-    minimum_time = document.querySelector('input[name="minimum_time"]:checked').value;
-    objective = document.querySelector('input[name="objective"]:checked').value;
+    position_value = document.querySelector('input[name="difficulty"]:checked').value;
+    difficulty_value = document.querySelector('input[name="position"]:checked')  === null ? "" : document.querySelector('input[name="position"]:checked').value;
+    style = document.querySelector('input[name="style"]:checked') === null ? "" : document.querySelector('input[name="style"]:checked').value;
+    minimum_time = document.querySelector('input[name="minimum_time"]:checked') === null ? "" : document.querySelector('input[name="minimum_time"]:checked').value;
+    objective = document.querySelector('input[name="objective"]:checked') === null ? "" : document.querySelector('input[name="objective"]:checked').value;
     body_obj = {
         color: color_value,
         position: position_value,
@@ -65,7 +66,9 @@ var next6 = document.getElementById('next6')
 
 document.addEventListener('DOMContentLoaded', function() {
     let query = window.matchMedia("(max-width: 767px)");
+    console.log('DOMContentLoaded')
     if (query.matches) {
+        console.log('match')
         
         next0.onclick = function() {
             q0.style.left = "-650px";
@@ -82,14 +85,17 @@ document.addEventListener('DOMContentLoaded', function() {
         next3.onclick = function() {
             q3.style.left = "-650px";
             q4.style.left = "15px";
+            getResult()
         }
         next4.onclick = function() {
             q4.style.left = "-650px";
             q5.style.left = "15px";
+            getResult()
         }
         next5.onclick = function() {
             q5.style.left = "-650px";
             q6.style.left = "15px";
+            getResult()
         }
         back1.onclick = function() {
             q1.style.left = "15px";
@@ -119,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
             getResult()
         }
     } else {
+        console.log('not match')
         next0.onclick = function() {
             q0.style.left = "-650px";
             q1.style.left = "50px";
@@ -134,14 +141,17 @@ document.addEventListener('DOMContentLoaded', function() {
         next3.onclick = function() {
             q3.style.left = "-650px";
             q4.style.left = "50px";
+            getResult()
         }
         next4.onclick = function() {
             q4.style.left = "-650px";
             q5.style.left = "50px";
+            getResult()
         }
         next5.onclick = function() {
             q5.style.left = "-650px";
             q6.style.left = "50px";
+            getResult()
         }
         back1.onclick = function() {
             q1.style.left = "50px";
