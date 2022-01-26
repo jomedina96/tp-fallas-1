@@ -1,15 +1,15 @@
 async function getResult() {
     console.log('get result')
     color_value = document.querySelector('input[name="color"]:checked').value;
-    position_value = document.querySelector('input[name="difficulty"]:checked').value;
-    difficulty_value = document.querySelector('input[name="position"]:checked')  === null ? "" : document.querySelector('input[name="position"]:checked').value;
+    difficulty = document.querySelector('input[name="difficulty"]:checked').value;
+    position = document.querySelector('input[name="position"]:checked')  === null ? "" : document.querySelector('input[name="position"]:checked').value;
     style = document.querySelector('input[name="style"]:checked') === null ? "" : document.querySelector('input[name="style"]:checked').value;
     minimum_time = document.querySelector('input[name="minimum_time"]:checked') === null ? "" : document.querySelector('input[name="minimum_time"]:checked').value;
     objective = document.querySelector('input[name="objective"]:checked') === null ? "" : document.querySelector('input[name="objective"]:checked').value;
     body_obj = {
         color: color_value,
-        position: position_value,
-        difficulty: difficulty_value,
+        position,
+        difficulty,
         style: style,
         minimum_time: minimum_time,
         objective: objective
