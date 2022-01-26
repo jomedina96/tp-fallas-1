@@ -63,6 +63,30 @@ var next5 = document.getElementById('next5')
 var back5 = document.getElementById('back5')
 
 var next6 = document.getElementById('next6')
+var next10 = document.getElementById('next10')
+var next11 = document.getElementById('next11')
+var next12 = document.getElementById('next12')
+
+const showResult = function() {
+    console.log('enviar 1')
+    q6.style.left = "-650px";
+    q5.style.left = "-650px";
+    q4.style.left = "-650px";
+    q3.style.left = "-650px";
+    result.style.left = "15px";
+    getResult()
+}
+
+const showResultTwo = function() {
+    console.log('enviar 2')
+    q6.style.left = "-650px";
+    q5.style.left = "-650px";
+    q4.style.left = "-650px";
+    q3.style.left = "-650px";
+    result.style.left = "50px";
+
+    getResult()
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     let query = window.matchMedia("(max-width: 767px)");
@@ -81,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         next2.onclick = function() {
             q2.style.left = "-650px";
             q3.style.left = "15px";
+            getResult()
         }
         next3.onclick = function() {
             q3.style.left = "-650px";
@@ -118,12 +143,10 @@ document.addEventListener('DOMContentLoaded', function() {
             q6.style.left = "650px";
         }
 
-        next6.onclick = function() {
-            q6.style.left = "-650px";
-            result.style.left = "15px";
-
-            getResult()
-        }
+        next6.onclick = showResult
+        next10.onclick = showResult
+        next11.onclick = showResult
+        next12.onclick = showResult
     } else {
         console.log('not match')
         next0.onclick = function() {
@@ -141,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
         next3.onclick = function() {
             q3.style.left = "-650px";
             q4.style.left = "50px";
+            console.log('')
             getResult()
         }
         next4.onclick = function() {
@@ -174,11 +198,9 @@ document.addEventListener('DOMContentLoaded', function() {
             q6.style.left = "650px";
         }
         
-        next6.onclick = function() {
-            q6.style.left = "-650px";
-            result.style.left = "50px";
-
-            getResult()
-        }
+        next6.onclick = showResultTwo
+        next10.onclick = showResultTwo
+        next11.onclick = showResultTwo
+        next12.onclick = showResultTwo
     }
 });
