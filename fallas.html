@@ -51,8 +51,8 @@
         <div class="h4 font-weight-bold">1. ¿Qué color va a utilizar?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Blancas<input type="radio" name="color" value="white"> <span class="checkmark"></span> </label><br> 
-                <label class="options">Negras<input type="radio" name="color" value="black"> <span class="checkmark"></span> </label>
+                <label class="options">Blancas<input type="radio" name="color" value="white" autocomplete="off" onclick="clickedOption(1)"> <span class="checkmark"></span> </label><br>
+                <label class="options">Negras<input type="radio" name="color" value="black" autocomplete="off" onclick="clickedOption(1)"> <span class="checkmark"></span> </label>
             </form>
         </div>
         <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back0"> <span class="fas fa-arrow-left pr-2"></span>Anterior </button> <button class="btn btn-primary" id="next1">Siguiente <span class="fas fa-arrow-right"></span></button> </div>
@@ -65,9 +65,9 @@
         <div class="h4 font-weight-bold">2. ¿Cuánta experiencia tiene en el juego?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Principiante<input type="radio" name="difficulty" value="1"> <span class="checkmark"></span> </label><br>
-                <label class="options">Avanzado <input type="radio" name="difficulty" value="3" > <span class="checkmark"></span> </label><br> 
-                <label class="options">Experto <input type="radio" name="difficulty" value="5""> <span class="checkmark"></span> </label> <br>
+                <label class="options">Principiante<input type="radio" name="difficulty" value="1" autocomplete="off" onclick="clickedOption(2)"> <span class="checkmark"></span> </label><br>
+                <label class="options">Avanzado <input type="radio" name="difficulty" value="3" autocomplete="off" onclick="clickedOption(2)"> <span class="checkmark"></span> </label><br>
+                <label class="options">Experto <input type="radio" name="difficulty" value="5" autocomplete="off" onclick="clickedOption(2)"> <span class="checkmark"></span> </label> <br>
             </form>
         </div>
         <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back1"> <span class="fas fa-arrow-left pr-1"></span>Anterior </button> <button class="btn btn-primary" id="next2">Siguiente <span class="fas fa-arrow-right"></span> </button> </div>
@@ -80,9 +80,9 @@
         <div class="h4 font-weight-bold">3. ¿Qué tipo de posición desea?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Abierta<input type="radio" name="position" value="open"> <span class="checkmark"></span> </label> <br>
-                <label class="options">Semi-abierta<input type="radio" name="position" value="semi-open"> <span class="checkmark"></span> </label> <br>
-                <label class="options">Cerrada<input type="radio" name="position" id="rd" value="closed"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Abierta<input type="radio" name="position" value="open" autocomplete="off" onclick="clickedOption(3)"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Semi-abierta<input type="radio" name="position" value="semi-open" autocomplete="off" onclick="clickedOption(3)"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Cerrada<input type="radio" name="position" id="rd" value="closed" autocomplete="off" onclick="clickedOption(3)"> <span class="checkmark"></span> </label> <br>
             </form>
         </div>
         <div class="d-flex justify-content-end pt-2"> 
@@ -100,8 +100,8 @@
         <div class="h4 font-weight-bold"> 4. ¿Qué estilo de partida prefiere?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Dinámica<input type="radio" name="style" value="dinamic"> <span class="checkmark"></span> </label> <br>
-                <label class="options">Posicional<input type="radio" name="style" value="positional"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Dinámica<input type="radio" name="style" value="dinamic" autocomplete="off" onclick="clickedOption(4)"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Posicional<input type="radio" name="style" value="positional" autocomplete="off" onclick="clickedOption(4)"> <span class="checkmark"></span> </label> <br>
             </form>
         </div>
         <div class="d-flex justify-content-end pt-2"> 
@@ -118,10 +118,10 @@
         <div class="h4 font-weight-bold">5. ¿Cuál es la modalidad de juego?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Bala<input type="radio" name="minimum_time" value="1"> <span class="checkmark"></span> </label> <br>
-                <label class="options">Blitz<input type="radio" name="minimum_time" value="2"> <span class="checkmark"></span> </label> <br>
-                <label class="options">Rápido<input type="radio" name="minimum_time" value="3"> <span class="checkmark"></span> </label> <br>
-                <label class="options">Clásico<input type="radio" name="minimum_time" value="4"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Bala<input type="radio" name="minimum_time" value="1" autocomplete="off" onclick="clickedOption(5)"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Blitz<input type="radio" name="minimum_time" value="2" autocomplete="off" onclick="clickedOption(5)"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Rápido<input type="radio" name="minimum_time" value="3" autocomplete="off" onclick="clickedOption(5)"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Clásico<input type="radio" name="minimum_time" value="4" autocomplete="off" onclick="clickedOption(5)"> <span class="checkmark"></span> </label> <br>
             </form>
         </div>
         <div class="d-flex justify-content-end pt-2"> 
@@ -138,22 +138,33 @@
         <div class="h4 font-weight-bold">6. ¿Cuál es su objetivo en la partida?</div>
         <div class="pt-4">
             <form> 
-                <label class="options">Ganar<input type="radio" name="objective" value="win"> <span class="checkmark"></span> </label><br> 
-                <label class="options">Tratar de empatar<input type="radio" name="objective" value="stalemate"> <span class="checkmark"></span> </label> <br>
+                <label class="options">Ganar<input type="radio" name="objective" value="win" onclick="clickedOption(6)"> <span class="checkmark"></span> </label><br>
+                <label class="options">Tratar de empatar<input type="radio" name="objective" value="stalemate" onclick="clickedOption(6)"> <span class="checkmark"></span> </label> <br>
             </form>
         </div>
         <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back5"> <span class="fas fa-arrow-left pr-2"></span>Anterior </button> <button class="btn btn-primary" id="next12">Enviar </button> </div>
     </div>
-    
+
     <div class="wrap" id="result">
         <div class="text-center pb-4">
             <div class="h5 font-weight-bold"> <span id="number"> </span>Resultado</div>
         </div>
         <a id="opening-link"><div class="h5 font-weight-bold" id="opening-name" style="text-align: center;">Loading...</div></a><br>
         <div class="container"><img id="opening-image"></img></div>
+    </div>
 
+    <div class="text-bottom" id="list">
+        <ul style="list-style-type: none">
+            <li id="first" style="display: none">Sin seleccionar</li>
+            <li id="second" style="display: none">Sin seleccionar</li>
+            <li id="third" style="display: none">Sin seleccionar</li>
+            <li id="fourth" style="display: none">Sin seleccionar</li>
+            <li id="fifth" style="display: none">Sin seleccionar</li>
+            <li id="sixth" style="display: none">Sin seleccionar</li>
+        </ul>
     </div>
 </div>
+
 <footer class="footer">
     <div class="row">
         <div class="col-sm-6 col-md-6 footer-navigation">

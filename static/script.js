@@ -67,8 +67,18 @@ var next10 = document.getElementById('next10')
 var next11 = document.getElementById('next11')
 var next12 = document.getElementById('next12')
 
+var list = document.getElementById('list')
+var item1 = document.getElementById('first')
+var item2 = document.getElementById('second')
+var item3 = document.getElementById('third')
+var item4 = document.getElementById('fourth')
+var item5 = document.getElementById('fifth')
+var item6 = document.getElementById('sixth')
+
 const showResult = function() {
     console.log('enviar 1')
+    list.style.display = "none";
+
     q6.style.left = "-650px";
     q5.style.left = "-650px";
     q4.style.left = "-650px";
@@ -79,6 +89,8 @@ const showResult = function() {
 
 const showResultTwo = function() {
     console.log('enviar 2')
+    list.style.display = "none";
+
     q6.style.left = "-650px";
     q5.style.left = "-650px";
     q4.style.left = "-650px";
@@ -86,6 +98,48 @@ const showResultTwo = function() {
     result.style.left = "50px";
 
     getResult()
+}
+
+let q1_map = new Map([["white", "Blancas"], ["black", "Negras"]]);
+let q2_map = new Map([["1", "Principiante"], ["3", "Avanzado"], ["5", "Experto"]]);
+let q3_map = new Map([["open", "Abierta"], ["semi-open", "Semi-abierta"], ["closed", "Cerrada"]]);
+let q4_map = new Map([["dinamic", "Dinámica"], ["positional", "Posicional"]]);
+let q5_map = new Map([["1", "Bala"], ["2", "Blitz"], ["3", "Rápido"], ["4", "Clásico"]]);
+let q6_map = new Map([["win", "Ganar"], ["stalemate", "Tratar de empatar"]]);
+
+const clickedOption = function(question) {
+    switch (question) {
+        case 1:
+            item1.style.display = '';
+            var value = document.querySelector('input[name="color"]:checked').value;
+            item1.innerHTML = '1. ' + q1_map.get(value);
+            break;
+        case 2:
+            item2.style.display = '';
+            var value = document.querySelector('input[name="difficulty"]:checked').value;
+            item2.innerHTML = '2. ' + q2_map.get(value);
+            break;
+        case 3:
+            item3.style.display = '';
+            var value = document.querySelector('input[name="position"]:checked').value;
+            item3.innerHTML = '3. ' + q3_map.get(value);
+            break;
+        case 4:
+            item4.style.display = '';
+            var value = document.querySelector('input[name="style"]:checked').value;
+            item4.innerHTML = '4. ' + q4_map.get(value);
+            break;
+        case 5:
+            item5.style.display = '';
+            var value = document.querySelector('input[name="minimum_time"]:checked').value;
+            item5.innerHTML = '5. ' + q5_map.get(value);
+            break;
+        case 6:
+            item6.style.display = '';
+            var value = document.querySelector('input[name="objective"]:checked').value;
+            item6.innerHTML = '6. ' + q6_map.get(value);
+            break;
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
