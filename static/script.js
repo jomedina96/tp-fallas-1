@@ -159,22 +159,18 @@ document.addEventListener('DOMContentLoaded', function() {
         next2.onclick = function() {
             q2.style.left = "-650px";
             q3.style.left = "15px";
-            getResult()
         }
         next3.onclick = function() {
             q3.style.left = "-650px";
             q4.style.left = "15px";
-            getResult()
         }
         next4.onclick = function() {
             q4.style.left = "-650px";
             q5.style.left = "15px";
-            getResult()
         }
         next5.onclick = function() {
             q5.style.left = "-650px";
             q6.style.left = "15px";
-            getResult()
         }
         back1.onclick = function() {
             q1.style.left = "15px";
@@ -218,18 +214,14 @@ document.addEventListener('DOMContentLoaded', function() {
         next3.onclick = function() {
             q3.style.left = "-650px";
             q4.style.left = "50px";
-            console.log('')
-            getResult()
         }
         next4.onclick = function() {
             q4.style.left = "-650px";
             q5.style.left = "50px";
-            getResult()
         }
         next5.onclick = function() {
             q5.style.left = "-650px";
             q6.style.left = "50px";
-            getResult()
         }
         back1.onclick = function() {
             q1.style.left = "50px";
